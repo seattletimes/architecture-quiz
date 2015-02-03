@@ -1,0 +1,24 @@
+{
+  "name": "architecture-quiz",
+  "version": "0.0.1",
+  "homepage": "https://github.com/seattletimes/architecture-quiz",
+  "authors": [
+    "The Seattle Times"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "component-responsive-frame": "~0.0.5",
+    "jquery": "~2.1.3"
+  }
+}

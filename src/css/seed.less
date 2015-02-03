@@ -1,0 +1,36 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.viewport {
+  position: relative;
+  width: 800px;
+  overflow: hidden;
+  height: 640px;
+
+  img {
+    position: absolute;
+
+    &.small {
+      position: relative;
+      width: 100%;
+      transform-origin: top left;
+    }
+  }
+}
+
+.animated-transform {
+  @duration: 1s;
+  transition: -webkit-transform @duration;
+  transition: -moz-transform @duration;
+  transition: -ms-transform @duration;
+  transition: transform @duration;
+}
+
+.animated-fadeout {
+  transition: opacity 1s;
+  opacity: 0;
+}
