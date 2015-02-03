@@ -1,18 +1,32 @@
 var $ = require("jquery");
 var zoom = require("./zoom");
 
-var spec = window.imageList[6];
+var template = require("./_question.html");
+var ich = require("icanhaz");
+ich.addTemplate("question", template);
+
 var viewport = document.querySelector(".viewport");
 
-var large = new Image();
-large.src = "assets/large/" + spec.large.file;
-viewport.appendChild(large);
+var current = 0;
 
-var small = new Image();
-small.src = "assets/small/" + spec.small.file;
-small.className = "small";
-viewport.appendChild(small);
+var render = function() {
+  var spec = window.imageList[current];
+  viewport.innerHTML = ich.question({
+    large: spec.large.file,
+    small: spec.small.file
+  });
+};
 
-$(document.body).one("click", function() {
+$(document.body).on("click", ".next", () => {
+  current++;
+  render();
+});
+
+render();
+
+$(document.body).on("click", ".small", () => {
+  var small = viewport.querySelector(".small");
+  var spec = window.imageList[current];
+  console.log(small, spec);
   zoom(small, spec);
 });
