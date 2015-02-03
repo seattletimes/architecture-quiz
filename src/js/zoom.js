@@ -1,3 +1,5 @@
+/* esnext:true */
+
 var $ = require("jquery");
 var wait = require("./util").wait;
 
@@ -18,23 +20,19 @@ width/top/left to the small image to freeze it in place responsively
 */
 
 var transform = function(x, y, s) {
-  return "translate(" + x + "px, " + y + "px) scale(" + s + ")";
+  return `translate( ${x}px, ${y}px) scale(${s})`;
 };
 
 var freezeAsTransform = function(image, spec) {
   var bounds = image.getBoundingClientRect();
   var ratio = bounds.width / spec.small.width;
-  var t = transform(0, 0, ratio);
   $(image).css({
-    transform: t,
+    transform: transform(0, 0, ratio),
     width: "auto"
   });
 };
 
 var zoomToScale = function(image, spec) {
-  // var ratio = spec.w / spec.small.width;
-  // var t = transform(spec.x, spec.y, ratio);
-  // $(image).css("transform", t);
   var keyframe = spec.keyframe;
   var rescaled = {
     x: keyframe.x / keyframe.original * spec.large.width,
@@ -66,16 +64,12 @@ module.exports = function(image, spec) {
   //figure out the current size, and apply transformation
   freezeAsTransform(image, spec);
   wait(10, true)
-    .then(function() {
-      $(image).addClass("animated-transform");
-    })
+    .then(() => $(image).addClass("animated-transform"))
     .then(wait(10))
-    .then(function() {
-      zoomToScale(image, spec);
-    })
+    .then(() => zoomToScale(image, spec))
     .then(wait(1000))
     .then(function() {
       freezeAsWidth(image, spec);
       $(image).addClass("animated-fadeout");
     });
-}
+};

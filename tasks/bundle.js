@@ -6,13 +6,15 @@ module.exports = function(grunt) {
   var browserify = require("browserify");
   var exorcist = require("exorcist");
   var fs = require("fs");
+  var to5 = require("6to5ify");
 
   grunt.registerTask("bundle", "Build app.js using browserify", function(mode) {
     //run in dev mode unless otherwise specified
-    var mode = mode || "dev";
+    mode = mode || "dev";
     var done = this.async();
 
     var b = browserify({ debug: mode == "dev" });
+    b.transform(to5);
 
     //make sure build/ exists
     grunt.file.mkdir("build");

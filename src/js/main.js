@@ -1,7 +1,7 @@
 var $ = require("jquery");
 var zoom = require("./zoom");
 
-var spec = window.imageList[7];
+var spec = window.imageList[6];
 var viewport = document.querySelector(".viewport");
 
 var large = new Image();
