@@ -1,4 +1,3 @@
-var $ = require("jquery");
 var zoom = require("./zoom");
 
 var template = require("./_question.html");
@@ -17,16 +16,16 @@ var render = function() {
   });
 };
 
-$(document.body).on("click", ".next", () => {
+document.querySelector(".next").addEventListener("click", () => {
   current++;
   render();
 });
 
 render();
 
-$(document.body).on("click", ".small", () => {
-  var small = viewport.querySelector(".small");
+document.body.addEventListener("click", e => {
+  if (!e.target.className.contains("small")) return;
+  var small = e.target;
   var spec = window.imageList[current];
-  console.log(small, spec);
   zoom(small, spec);
 });

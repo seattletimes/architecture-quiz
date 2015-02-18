@@ -34,8 +34,19 @@ var images = csv.coordinates.map(function(row) {
   }
   return image;
 });
+
+//process questions
+var questions = {};
+json.ArchitectureQuiz_questions.forEach(function(row, index) {
+  questions[row.id] = row;
+  row.answers = [];
+});
+json.ArchitectureQuiz_answers.forEach(function(row) {
+  questions[row.question].answers.push(row);
+});
 %>
 window.imageList = <%= JSON.stringify(images) %>;
+window.quizData = <%= JSON.stringify(json.ArchitectureQuiz_questions) %>;
     </script>
     <script src="app.js"></script>
     <% /*= t.include("partials/_adFoot.html"); */ %>

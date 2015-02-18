@@ -1,13 +1,11 @@
-var $ = require("jquery");
+var Promise = require("rsvp").Promise;
 
 module.exports = {
   wait: function(duration, immediate) {
     var delay = function() {
-      var deferred = $.Deferred();
-      setTimeout(function() {
-        deferred.resolve();
-      }, duration || 400);
-      return deferred.promise();
+      return new Promise(function(ok) {
+        window.setTimeout(ok, duration || 400);
+      });
     };
     return immediate ? delay() : delay;
   }
