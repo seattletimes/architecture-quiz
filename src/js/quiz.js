@@ -20,14 +20,14 @@ Quiz.prototype = {
   questions: null,
   correct: null,
   block: null,
-  render: function() {
+  render() {
     var spec = this.images[this.qIndex];
     this.view.innerHTML = ich.question({
       large: spec.large.file,
       small: spec.small.file
     });
   },
-  bind: function() {
+  bind() {
     var self = this;
     document.querySelector(".next").addEventListener("click", this.next.bind(this));
     document.body.addEventListener("click", function(e) {
@@ -35,10 +35,10 @@ Quiz.prototype = {
       self.shrink();
     });
   },
-  check: function() {
+  check() {
     //check for question results, trigger the animation, call next() after finish
   },
-  next: function() {
+  next() {
     if (this.block) return;
     this.qIndex++;
     if (this.qIndex >= this.questions.length) {
@@ -46,10 +46,10 @@ Quiz.prototype = {
     }
     this.render();
   },
-  complete: function() {
+  complete() {
     console.log("ALL DONE");
   },
-  shrink: function() {
+  shrink() {
     if (this.block) return;
     this.block = true;
     var small = document.querySelector(".small");
