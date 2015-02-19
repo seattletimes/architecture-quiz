@@ -10,6 +10,7 @@ var Quiz = function(data, images, view) {
   this.questions = data;
   this.images = images;
   this.correct = 0;
+  this.block = false;
   this.bind();
   this.render();
 };
@@ -18,6 +19,7 @@ Quiz.prototype = {
   qIndex: null,
   questions: null,
   correct: null,
+  block: null,
   render: function() {
     var spec = this.images[this.qIndex];
     this.view.innerHTML = ich.question({
@@ -34,9 +36,10 @@ Quiz.prototype = {
     });
   },
   check: function() {
-
+    //check for question results, trigger the animation, call next() after finish
   },
   next: function() {
+    if (this.block) return;
     this.qIndex++;
     if (this.qIndex >= this.questions.length) {
       return this.complete();
@@ -47,9 +50,11 @@ Quiz.prototype = {
     console.log("ALL DONE");
   },
   shrink: function() {
+    if (this.block) return;
+    this.block = true;
     var small = document.querySelector(".small");
     var spec = this.images[this.qIndex];
-    zoom(small, spec);
+    zoom(small, spec, () => this.block = false);
   }
 };
 

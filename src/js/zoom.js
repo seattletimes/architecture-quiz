@@ -67,13 +67,16 @@ var freezeAsWidth = function(image) {
   triggerLayout();
 };
 
-module.exports = function(image, spec) {
+module.exports = function(image, spec, callback) {
+  callback = callback || function() {};
   //figure out the current size, and apply transformation
   freezeAsTransform(image, spec);
   image.className += " animated-transform"
   zoomToScale(image, spec);
-  wait(1000, true).then(function() {
+  wait(1000, function() {
     freezeAsWidth(image, spec);
     image.className += " animated-fadeout";
+    //wait for fade to complete
+    image.addEventListener("transitionend", callback);
   });
 };
