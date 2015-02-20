@@ -1,8 +1,6 @@
 var zoom = require("./zoom");
 
 var template = require("./_question.html");
-var ich = require("icanhaz");
-ich.addTemplate("question", template);
 
 var Quiz = function(data, images, view) {
   this.view = typeof view == "string" ? document.querySelector(view) : view;
@@ -22,10 +20,7 @@ Quiz.prototype = {
   block: null,
   render() {
     var spec = this.images[this.qIndex];
-    this.view.innerHTML = ich.question({
-      large: spec.large.file,
-      small: spec.small.file
-    });
+    this.view.innerHTML = template.replace("{{large}}", spec.large.file).replace("{{small}}", spec.small.file);
   },
   bind() {
     var self = this;
