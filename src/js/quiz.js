@@ -26,7 +26,7 @@ Quiz.prototype = {
     var self = this;
     document.querySelector(".next").addEventListener("click", this.next.bind(this));
     document.body.addEventListener("click", function(e) {
-      if (!e.target.className.contains("small")) return;
+      if (!e.target.classList.contains("small")) return;
       self.shrink();
     });
   },
