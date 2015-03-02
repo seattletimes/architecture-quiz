@@ -1,2 +1,12 @@
-<img src="assets/large/{{large}}" class="large">
-<img src="assets/small/{{small}}" class="small">
+<div class="viewport">
+  <img src="assets/large/<%= data.image.large.file %>" class="large">
+  <img src="assets/small/<%= data.image.small.file %>" class="small">
+</div>
+<div class="answers">
+  <ul class="answer-list">
+    <% data.answers.forEach(function(item, i) { %>
+    <li class="answer-item" data-index=<%= i %>> <%= item.answer %>
+    <% }); %>
+  </ul>
+  <button class="next-button">Next question</button>
+</div>

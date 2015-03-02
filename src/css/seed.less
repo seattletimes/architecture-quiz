@@ -34,3 +34,23 @@
   transition: opacity 1s;
   opacity: 0;
 }
+
+.next-button {
+  display: none;
+
+  .answered & {
+    display: block;
+  }
+}
+
+.answer-list {
+  .answer-item {
+    &.right {
+      color: green;
+    }
+
+    &.wrong {
+      color: red;
+    }
+  }
+}

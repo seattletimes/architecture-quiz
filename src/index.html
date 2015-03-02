@@ -9,15 +9,16 @@
   </head>
   <body>
 
-    <div class="viewport"></div>
-    <a class="next">NEXT</a>
+    <div class="quiz-frame"></div>
 
     <script>
 <%
-var images = csv.coordinates.map(function(row) {
+var images = {};
+
+csv.coordinates.forEach(function(row) {
   var image = {};
   ["large", "small"].forEach(function(size) {
-    var filename = row[size];
+    var filename = row.file;
     var dimensions = sizes[size][filename];
     image[size] = {
       file: filename,
@@ -32,16 +33,20 @@ var images = csv.coordinates.map(function(row) {
     w: row.w,
     h: row.h
   }
-  return image;
+  images[row.file.replace(".jpg", "")] = image;
 });
 
 //process questions
 var questions = {};
 json.ArchitectureQuiz_questions.forEach(function(row, index) {
   questions[row.id] = row;
+  row.image = images[row.image];
+  delete row.title;
   row.answers = [];
 });
 json.ArchitectureQuiz_answers.forEach(function(row) {
+  row.correct = !!row.correct;
+  delete row.title;
   questions[row.question].answers.push(row);
 });
 %>
