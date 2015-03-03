@@ -12,17 +12,21 @@ var Quiz = function(data, view) {
   this.view = typeof view == "string" ? document.querySelector(view) : view;
   this.qIndex = 0;
   this.questions = data;
-  this.correct = 0;
-  this.block = false;
+  this.score = 0;
+  this.state = Quiz.READY;
   this.bind();
   this.render();
 };
 
+Quiz.READY = "waiting";
+Quiz.ANSWERED = "answered";
+Quiz.ANIMATING = "animating";
+
 Quiz.prototype = {
   qIndex: null,
   questions: null,
-  correct: null,
-  block: null,
+  score: null,
+  state: null,
   render() {
     var q = this.questions[this.qIndex];
     var html = template(q);
@@ -30,22 +34,27 @@ Quiz.prototype = {
   },
   bind() {
     var self = this;
-    this.view.addEventListener("click", function(e) {
+    this.view.addEventListener("click", (e) => {
       //handle clicks on answers
-      if (e.target.className.indexOf("answer-item") > -1) {
-        self.check(e.target.getAttribute("data-index") * 1, e.target);
+      if (e.target.className.indexOf("answer-item") > -1 && this.state == Quiz.READY) {
+        this.check(e.target.getAttribute("data-index") * 1, e.target);
       }
       //handle clicks on the next button
       if (e.target.className == "next-button") {
-        self.next();
+        this.next();
       }
     });
   },
   check(answerIndex, li) {
-    //check for question results, trigger the animation, call next() after finish
+    //switch states, run animation
+    this.state = Quiz.ANSWERED;
     this.shrink();
+    //check answers and apply styling
     var question = this.questions[this.qIndex];
     var answer = question.answers[answerIndex];
+    if (answer.correct) {
+      this.score++;
+    }
     util.addClass(li, "picked");
     util.qsa(".answer-item", this.view).forEach(item => {
       var index = item.getAttribute("data-index") * 1;
@@ -53,12 +62,13 @@ Quiz.prototype = {
     });
   },
   next() {
-    if (this.block) return;
+    if (this.state != Quiz.ANSWERED) return;
     this.qIndex++;
     if (this.qIndex >= this.questions.length) {
       return this.complete();
     }
     this.render();
+    this.state = Quiz.READY;
   },
   complete() {
     console.log("ALL DONE");
@@ -66,11 +76,12 @@ Quiz.prototype = {
   shrink(f) {
     f = f || function() {};
     if (this.block) return;
-    this.block = true;
+    var state = this.state;
+    this.state = Quiz.ANIMATING;
     var small = document.querySelector(".small");
     var spec = this.questions[this.qIndex].image;
     zoom(small, spec, () => {
-      this.block = false;
+      this.state = state;
       util.addClass(this.view.querySelector(".answers"), "answered");
     });
   }

@@ -1,3 +1,3 @@
 var Quiz = require("./quiz");
 
-var q = new Quiz(window.quizData, ".quiz-frame");
+var q = window.quiz = new Quiz(window.quizData, ".quiz-frame");

@@ -22,11 +22,23 @@
 
 <!-- start ad set-up -->
 <script>
-//modify for specific page info
-OAS_sitepage = 'www.seattletimes.com/business';
-OAS_query = '?<%= grunt.data.json.project.tags && grunt.data.json.project.tags.join("&") %>';
-//uncomment the ad positions you're going to use ("Top" and "TopRight" usually)
-OAS_listpos = '';//'Position1,TopRight,Right1,Top,Top1,Middle3,Position3,Right,Right2,Bottom,Top3';
+window.googletag = {
+  cmd: [],
+  seatimes: {
+    tags: <%= JSON.stringify(json.project.tags) %>,
+    unit: "/81279359/seattletimes.com"
+  }
+};
 </script>
-<script src="http://seattletimes.com/js/standardFunctionality/AdTags.js"></script>
 <!-- end ad set-up -->
+
+<!-- typekit fonts -->
+<script>
+(function(d) {
+var config = {
+  kitId: 'rvq5yyp',
+  scriptTimeout: 3000
+},
+h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
+</script>

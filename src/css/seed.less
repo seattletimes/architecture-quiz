@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+@import "seattletimes";
+@import "values";
+
 .viewport {
   position: relative;
   width: 600px;
@@ -31,7 +34,7 @@
 }
 
 .animated-fadeout {
-  transition: opacity 1s;
+  transition: opacity .4s linear;
   opacity: 0;
 }
 
@@ -44,13 +47,34 @@
 }
 
 .answer-list {
+  list-style-type: none;
+  padding: 0;
+  maring: 0;
+
   .answer-item {
+    &::before {
+      content: "•";
+      width: 20px;
+      display: inline-block;
+      text-align: center;
+    }
+
     &.right {
-      color: green;
+      color: @df-blue;
     }
 
     &.wrong {
-      color: red;
+      color: @df-orange;
+    }
+
+    &.picked {
+      &.right::before {
+        content: "✔";
+      }
+
+      &.wrong::before {
+        content: "✘";
+      }
     }
   }
 }
