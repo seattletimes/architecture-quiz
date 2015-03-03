@@ -11,21 +11,43 @@
 .quiz-frame {
   max-width: 600px;
   margin: auto;
+
+  @media @mobile {
+    font-size: 14px;
+  }
 }
 
 .viewport {
   position: relative;
-  width: 600px;
   overflow: hidden;
-  height: 600px;
+
+  .aspect-outer {
+    width: 100%;
+
+    .aspect-inner {
+      height: 0;
+      padding-bottom: 100%;
+    }
+  }
+
+  max-width: 100%;
 
   img {
     position: absolute;
+    max-width: none;
+
+    &.transformed {
+      width: auto !important;
+    }
 
     &.small {
       position: relative;
       width: 100%;
       transform-origin: top left;
+    }
+
+    &.large {
+      max-width: 100%;
     }
   }
 }

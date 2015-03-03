@@ -33,21 +33,23 @@ var triggerLayout = function() {
 var freezeAsTransform = function(image, spec) {
   var bounds = image.getBoundingClientRect();
   var ratio = bounds.width / spec.small.width;
+  console.log(bounds.width, spec.small.width, ratio);
   var t = transform(0, 0, ratio);
   image.style[transProp] = t;
-  image.style.width = "auto";
+  image.classList.add("transformed");
   triggerLayout();
 };
 
 var zoomToScale = function(image, spec) {
   var keyframe = spec.keyframe;
+  var size = image.getBoundingClientRect().width;
   var rescaled = {
-    x: keyframe.x / keyframe.original * spec.large.width,
-    y: keyframe.y / keyframe.original * spec.large.height,
-    width: keyframe.w / keyframe.original * spec.large.width,
-    height: keyframe.h / keyframe.original * spec.large.height
+    x: keyframe.x / keyframe.original * size,
+    y: keyframe.y / keyframe.original * size,
+    width: keyframe.w / keyframe.original * size,
+    height: keyframe.h / keyframe.original * size
   };
-  var ratio = rescaled.width / spec.small.width;
+  var ratio = rescaled.width / size;
   var t = transform(rescaled.x, rescaled.y, ratio);
   image.style[transProp] = t;
   triggerLayout();
@@ -58,12 +60,13 @@ var freezeAsWidth = function(image) {
   var parent = image.parentElement;
   var parentBounds = parent.getBoundingClientRect();
   var width = bounds.width / parent.offsetWidth;
-  image.className = image.className.replace(/\s*animated-transform\s*/g, "");
   image.style[transProp] = "";
   image.style.width = width * 100 + "%";
   image.style.top = bounds.top - parentBounds.top + "px";
   image.style.left = bounds.left - parentBounds.left + "px";
   image.style.position = "absolute";
+  image.classList.remove("animated-transform");
+  image.classList.remove("transformed");
   triggerLayout();
 };
 
@@ -71,11 +74,11 @@ module.exports = function(image, spec, callback) {
   callback = callback || function() {};
   //figure out the current size, and apply transformation
   freezeAsTransform(image, spec);
-  image.className += " animated-transform"
+  image.classList.add("animated-transform");
   zoomToScale(image, spec);
   wait(1000, function() {
     freezeAsWidth(image, spec);
-    image.className += " animated-fadeout";
+    image.classList.add("animated-fadeout");
     //wait for fade to complete
     image.addEventListener("transitionend", callback);
   });
