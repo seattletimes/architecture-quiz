@@ -33,7 +33,6 @@ var triggerLayout = function() {
 var freezeAsTransform = function(image, spec) {
   var bounds = image.getBoundingClientRect();
   var ratio = bounds.width / spec.small.width;
-  console.log(bounds.width, spec.small.width, ratio);
   var t = transform(0, 0, ratio);
   image.style[transProp] = t;
   image.classList.add("transformed");
