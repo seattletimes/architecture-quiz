@@ -11,5 +11,12 @@ module.exports = {
   },
   qsa: function(s, element) {
     return Array.prototype.slice.call((element || document).querySelectorAll(s));
+  },
+  closest: function(element, f) {
+    while (!f(element) && element !== document.body) {
+      element = element.parentElement;
+    }
+    if (element == document.body) return null;
+    return element;
   }
 };

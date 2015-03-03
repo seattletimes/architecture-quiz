@@ -7,11 +7,9 @@
   </div>
 </div>
 <div class="answers">
-  <p class="instructions">
-    What building is shown in the photo above?
   <ul class="answer-list">
     <% data.answers.forEach(function(item, i) { %>
-    <li class="answer-item" data-index=<%= i %>> <%= item.answer %>
+    <li class="answer-item" data-index=<%= i %>> <label><%= item.answer %></label>
     <% }); %>
   </ul>
   <button class="next-button">Next question</button>

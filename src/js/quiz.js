@@ -42,8 +42,9 @@ Quiz.prototype = {
     var self = this;
     this.view.addEventListener("click", (e) => {
       //handle clicks on answers
-      if (e.target.className.indexOf("answer-item") > -1 && this.state == Quiz.READY) {
-        this.check(e.target.getAttribute("data-index") * 1, e.target);
+      var li = util.closest(e.target, el => el.classList.contains("answer-item"));
+      if (li && this.state == Quiz.READY) {
+        this.check(e.target.getAttribute("data-index") * 1, li);
       }
       //handle clicks on the next button
       if (e.target.className == "next-button") {
@@ -61,10 +62,10 @@ Quiz.prototype = {
     if (answer.correct) {
       this.score++;
     }
-    util.addClass(li, "picked");
+    li.classList.add("picked");
     util.qsa(".answer-item", this.view).forEach(item => {
       var index = item.getAttribute("data-index") * 1;
-      util.addClass(item, question.answers[index].correct ? "right" : "wrong");
+      item.classList.add(question.answers[index].correct ? "right" : "wrong");
     });
   },
   next() {
@@ -89,7 +90,7 @@ Quiz.prototype = {
     var spec = this.questions[this.qIndex].image;
     zoom(small, spec, () => {
       this.state = state;
-      util.addClass(this.view.querySelector(".answers"), "answered");
+      this.view.querySelector(".answers").classList.add("answered");
     });
   }
 };
