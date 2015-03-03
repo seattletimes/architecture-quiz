@@ -8,6 +8,11 @@
 @import "seattletimes";
 @import "values";
 
+.quiz-frame {
+  max-width: 600px;
+  margin: auto;
+}
+
 .viewport {
   position: relative;
   width: 600px;
@@ -40,6 +45,11 @@
 
 .next-button {
   display: none;
+  border: none;
+  background: @df-blue;
+  color: @df-off-white;
+  padding: 8px;
+  font-size: 20px;
 
   .answered & {
     display: block;
@@ -52,6 +62,11 @@
   maring: 0;
 
   .answer-item {
+    cursor: pointer;
+    &:hover {
+      color: @df-goldenrod;
+    }
+
     &::before {
       content: "•";
       width: 20px;
@@ -64,7 +79,7 @@
     }
 
     &.wrong {
-      color: @df-orange;
+      color: @df-maroon;
     }
 
     &.picked {

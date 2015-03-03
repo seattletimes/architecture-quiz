@@ -7,6 +7,7 @@ dot.templateSettings.evaluate = /<%([\s\S]+?)%>/g;
 dot.templateSettings.interpolate = /<%=([\s\S]+?)%>/g;
 
 var template = dot.compile(require("./_question.html"));
+var completed = dot.compile(require("./_complete.html"));
 
 var Quiz = function(data, view) {
   this.view = typeof view == "string" ? document.querySelector(view) : view;
@@ -21,6 +22,7 @@ var Quiz = function(data, view) {
 Quiz.READY = "waiting";
 Quiz.ANSWERED = "answered";
 Quiz.ANIMATING = "animating";
+Quiz.COMPLETE = "complete";
 
 Quiz.prototype = {
   qIndex: null,
@@ -28,6 +30,10 @@ Quiz.prototype = {
   score: null,
   state: null,
   render() {
+    if (this.state == Quiz.COMPLETE) {
+      this.view.innerHTML = completed(this);
+      return;
+    }
     var q = this.questions[this.qIndex];
     var html = template(q);
     this.view.innerHTML = html;
@@ -71,7 +77,8 @@ Quiz.prototype = {
     this.state = Quiz.READY;
   },
   complete() {
-    console.log("ALL DONE");
+    this.state = Quiz.COMPLETE;
+    this.render();
   },
   shrink(f) {
     f = f || function() {};

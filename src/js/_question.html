@@ -3,6 +3,8 @@
   <img src="assets/small/<%= data.image.small.file %>" class="small">
 </div>
 <div class="answers">
+  <p class="instructions">
+    What building is shown in the building above?
   <ul class="answer-list">
     <% data.answers.forEach(function(item, i) { %>
     <li class="answer-item" data-index=<%= i %>> <%= item.answer %>
