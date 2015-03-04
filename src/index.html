@@ -5,15 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+     <link href='http://fonts.googleapis.com/css?family=Paytone+One|Oswald:700,400,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
 
+       <nav class="top-bar">
+      <a class="logo" href="http://seattletimes.com">
+        <img src="http://static.seattletimes.com/wp-content/uploads/2015/03/st-logo.png">
+      </a>
+    </nav>
+
+    <img class="illustration" src="http://static.seattletimes.com/wp-content/uploads/2015/03/illustration.jpg">
+
+     <header>
+      <h2 class="quiz-label">Architecture quiz</h2>
+      <h1 class="title">Which Seahawk <span class="green">are you?</span></h1>
+      <p class="chatter">This Seahawks team has captured your imagination with great play and larger-than-life personalities. But which Seahawks player are you most like? Take our personality quiz and find out.</p>
+    </header>
+
     <main class="wrapper">
       <div class="chatter">
-        <p> Guess each building based on the close-up picture shown.
+        <p> Guess each building based on the close-up picture shown
       </div>
       <div class="quiz-frame"></div>
     </main>
+
+
 
     <script>
 <%
@@ -61,4 +79,10 @@ window.quizData = <%= JSON.stringify(json.ArchitectureQuiz_questions) %>;
     <% /*= t.include("partials/_adFoot.html"); */ %>
     <%= t.include("partials/_workHere.html") %>
   </body>
+
+   <div class="credits">
+        Quiz by <span class="credit-name">Seattle Times staff</span>,
+        web development by <span class="credit-name">Audrey Carlsen</span>,
+        illustration by <span class="credit-name">David Miller</span>
+      </div>
 </html>
