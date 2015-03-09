@@ -13,11 +13,13 @@
 @mobile: ~"(max-width: 480px)";
 @tablet: ~"(max-width: 768px)";
 @blue: #164c75;
-@green: #8eb607;
+@green: #35755b;
 @gray: #AAA;
 @dark-gray: #555;
 @block: 'Paytone One', sans-serif;
 @narrow: 'Oswald', sans-serif;
+@dark-blue: #13628d;
+@red: #8e3724;
 
 
 main.wrapper {
@@ -81,7 +83,7 @@ main.wrapper {
 .next-button {
   display: none;
   border: none;
-  background: @df-blue;
+  background: @dark-blue;
   color: @df-off-white;
   padding: 8px;
   font-size: 20px;
@@ -132,12 +134,12 @@ main.wrapper {
     &.right {
       color: white;
       font-weight: bold;
-      background: @df-blue;
+      background: @dark-blue;
     }
 
     &.wrong.picked {
       color: @df-light-gray;
-      background: @df-orange;
+      background: @red;
     }
 
     &.picked {

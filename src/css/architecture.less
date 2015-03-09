@@ -24,20 +24,19 @@ nav.top-bar {
 
     @media @mobile {
       top: 0;
-
     }
+  }
 
-    img {
-      box-sizing: content-box;
-      height: 30px;
-      background: @green;
-      padding: 10px;
-      border: none;
+  img {
+    box-sizing: content-box;
+    height: 30px;
+    background: @dark-blue;
+    padding: 10px;
+    border: none;
 
-      @media @mobile {
-        background: none;
-        padding: 5px;
-      }
+    @media @mobile {
+      background: none;
+      padding: 5px;  
     }
   }
 }
@@ -66,7 +65,7 @@ header {
 
   .title {
     font-family: @block;
-    color: @blue;
+    color: @dark-blue;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 3em;
@@ -81,6 +80,7 @@ header {
     .green {
       font-size: 1.8em;
       display: block;
+      color: @red;
 
       @media @mobile {
         font-size: inherit;
@@ -152,4 +152,53 @@ footer {
   @media @mobile {
     padding-top: 0;
   }
+}
+.answers {
+  color: @dark-gray;
+  font-family: @narrow;
+  font-size: 1em;
+  margin: 1em auto;
+  max-width: 840px;
+  text-align: center;
+  .hint-button {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: @block;
+    font-weight: normal;
+    color: white;
+    background: @green;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px auto;
+
+    @media @tablet {
+      font-size: 14px;
+    }
+  }
+  .hint {
+    font-size: 16px;
+    font-family: @narrow;
+    font-size: 1em;
+    color: @gray;
+    text-align: center;
+    padding: 0px 50px;
+    margin: 0px auto;
+
+    @media @tablet {
+      font-size: 14px;
+    }
+  }
+  .itsthe {
+    font-family: @block;
+    font-weight: normal;
+    font-size: 25px;
+    .right-wrong {
+      color:@red;
+    }
+  }
+  .caption {
+    text-align: left;
+  }
+
+  
 }
