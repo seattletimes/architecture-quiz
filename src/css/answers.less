@@ -1,0 +1,144 @@
+
+.answer-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 8px 0;
+  font-family: @body;
+  .display-flex;
+  .flex-wrap(wrap);
+
+  .answer-item {
+    cursor: pointer;
+    background: @df-middle-gray;
+    color: @df-off-white;
+    padding: 8px;
+    transition: background-color .1s linear;
+    float: left;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    .flex(0 0 50%);
+    .display-flex;
+    .align-items(center);
+    .justify-content(center);
+
+    label {
+      display: block;
+      text-align: center;
+    }
+
+    &:hover {
+      background: @df-dark-gray;
+    }
+
+    &::after {
+      content: " ";
+      display: inline-block;
+      text-align: center;
+    }
+
+    &.right {
+      color: white;
+      font-weight: bold;
+      background: @dark-blue;
+    }
+
+    &.wrong.picked {
+      color: @df-light-gray;
+      background: @red;
+    }
+
+    &.picked {
+      // &.right::after {
+      //   content: "✔";
+      // }
+
+      // &.wrong::after {
+      //   content: "✘";
+      // }
+    }
+  }
+}
+
+
+.answers {
+  color: @dark-gray;
+  font-family: @body;
+  font-size: 1em;
+  margin: 1em auto;
+
+  .answer-info {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .hint-button {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: @block;
+    font-weight: normal;
+    color: white;
+    background: @green;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px auto;
+
+    @media @tablet {
+      font-size: 14px;
+    }
+  }
+
+  .hint {
+    font-size: 16px;
+    font-family: @body;
+    font-size: 1em;
+    color: @gray;
+    text-align: center;
+    padding: 0px 50px;
+    margin: 0px auto;
+
+    @media @tablet {
+      font-size: 14px;
+    }
+  }
+
+  .stats {
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: left;
+  }
+
+  .its-the {
+    font-family: @block;
+    font-weight: normal;
+    font-size: 25px;
+    text-align: center;
+    color: @df-dark-gray;
+
+    .wrong {
+      color: @red;
+      display: none;
+    }
+
+    .right {
+      color: @green;
+      display: none;
+    }
+
+    &.dexter .right {
+      display: inline;
+    }
+
+    &.sinister .wrong {
+      display: inline;
+    }
+  }
+
+  .caption {
+    text-align: left;
+  }
+}

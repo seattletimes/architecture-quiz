@@ -6,15 +6,32 @@
     </div>
   </div>
 </div>
+
+<div class="status">
+  #<%= data.id %> of 12
+</div>
+
 <div class="answers">
   <ul class="answer-list">
     <% data.answers.forEach(function(item, i) { %>
     <li class="answer-item" data-index=<%= i %>> <label><%= item.answer %></label>
     <% }); %>
   </ul>
+
   <button class="next-button">Next question</button>
-  <p class="itsthe"><span class="right-wrong">Wrong.</span> It's the Seattle Public Library.</p>
-  <p class="stats"><strong>Downtown</strong>, 1000 Fourth Ave. <strong>Designed by</strong> Rem Koolhaas and Joshua Prince-Ramus. <strong>Year completed:</strong> 2004.</p>
-  <p class="caption">The diamond-shaped glass panels on the outside of the Seattle Public Library are made differently depending on where they are. The glass is clear on parts of the building that don’t see much sun, but on the sunny parts the glass includes a layer of thin metal that reduces heat. (The library was the first building in the U.S. built with this technique.) The sun sees the glass as opaque, but from the inside, the glass looks transparent. The inside, after all, is where the real design zaniness lies, and if you’ve seen those Kubrick-esque red hallways — you know that’s another story.</p>
+
+  <div class="answer-info">
+    <h2 class="its-the">
+      <span class="right">Right.</span>
+      <span class="wrong">Wrong.</span>
+      <%= data.reveal %>
+    </h2>
+    <ul class="stats">
+      <li> <strong>Location:</strong> <%= data.location %>
+      <li> <strong>Designed by:</strong> <%= data.designer %>
+      <li> <strong>Year completed:</strong> <%= data.completed %>
+    </ul>
+    <p class="caption"><%= data.caption %></p>
+  </div>
 
 </div>

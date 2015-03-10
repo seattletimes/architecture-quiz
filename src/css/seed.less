@@ -5,11 +5,6 @@
   box-sizing: border-box;
 }
 
-@import "architecture";
-@import "seattletimes";
-@import "values";
-@import "flexbox";
-
 @mobile: ~"(max-width: 480px)";
 @tablet: ~"(max-width: 768px)";
 @blue: #164c75;
@@ -22,6 +17,14 @@
 @red: #8e3724;
 @body: 'PT Sans', sans-serif;
 @narrow: 'Oswald', sans-serif;
+
+@import "seattletimes";
+@import "values";
+@import "nav";
+@import "answers";
+@import "page";
+@import "flexbox";
+@import "viewport";
 
 body {
   font-family: @body;
@@ -37,10 +40,6 @@ body {
   }
 }
 
-.illustration {
-  width: 100%;
-  position: relative;
-}
 main.wrapper {
   max-width: 600px;
   margin: auto;
@@ -49,54 +48,6 @@ main.wrapper {
     font-size: 14px;
     line-height: 1.2;
   }
-}
-
-.viewport {
-  position: relative;
-  overflow: hidden;
-
-  .aspect-outer {
-    width: 100%;
-
-    .aspect-inner {
-      height: 0;
-      padding-bottom: 100%;
-    }
-  }
-
-  max-width: 100%;
-
-  img {
-    position: absolute;
-    max-width: none;
-
-    &.transformed {
-      width: auto !important;
-    }
-
-    &.small {
-      position: relative;
-      width: 100%;
-      transform-origin: top left;
-    }
-
-    &.large {
-      max-width: 100%;
-    }
-  }
-}
-
-.animated-transform {
-  @duration: 1s;
-  transition: -webkit-transform @duration;
-  transition: -moz-transform @duration;
-  transition: -ms-transform @duration;
-  transition: transform @duration;
-}
-
-.animated-fadeout {
-  transition: opacity .4s linear;
-  opacity: 0;
 }
 
 .next-button {
@@ -115,62 +66,76 @@ main.wrapper {
   }
 }
 
-.answer-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 8px 0;
+.status {
+  text-align: right;
+  padding: 4px;
+  font-size: 14px;
+  background: @df-dark-gray;
+  color: @df-off-white;
+}
+
+.divider {
+  border: 4px solid @blue;
+}
+
+.credits {
   font-family: @body;
-  .display-flex;
-  .flex-wrap(wrap);
+  font-size: 0.8em;
+  font-weight: 300;
+  text-align: center;
+  padding: 0px;
+  
+  .credit-name {
+    font-weight: 700;
+  }
 
-  .answer-item {
-    cursor: pointer;
-    background: @df-middle-gray;
-    color: @df-off-white;
-    padding: 8px;
-    transition: background-color .1s linear;
+  @media @mobile {
+    padding: 15px;
+  }
+}
+
+.thanks {
+  font-family: @body;
+  font-size: 0.7em;
+  font-weight: 300;
+  
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+
+  a {
+    color: @red;
+    text-decoration: none;
+  }
+
+  .thanks-name {
+    font-weight: 700;
+  }
+
+  @media @mobile {
+    padding: 15px;
+  }
+}
+
+.ad {
+  height: 90px;
+  width: 750px;
+  margin: 0 auto;
+
+  .floatleft {
     float: left;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    .flex(0 0 50%);
-    .display-flex;
-    .align-items(center);
-    .justify-content(center);
+  }
 
-    label {
-      display: block;
-      text-align: center;
-    }
+  @media @tablet {
+    display: none;
+  }
+}
 
-    &:hover {
-      background: @df-dark-gray;
-    }
+.tower-ad {
+  width: 320px;
+  padding: 0 10px;
+  float: right;
 
-    &::after {
-      content: " ";
-      display: inline-block;
-      text-align: center;
-    }
-
-    &.right {
-      color: white;
-      font-weight: bold;
-      background: @dark-blue;
-    }
-
-    &.wrong.picked {
-      color: @df-light-gray;
-      background: @red;
-    }
-
-    &.picked {
-      // &.right::after {
-      //   content: "✔";
-      // }
-
-      // &.wrong::after {
-      //   content: "✘";
-      // }
-    }
+  @media @tablet {
+    display: none;
   }
 }

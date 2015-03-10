@@ -44,7 +44,7 @@ Quiz.prototype = {
       //handle clicks on answers
       var li = util.closest(e.target, el => el.classList.contains("answer-item"));
       if (li && this.state == Quiz.READY) {
-        this.check(e.target.getAttribute("data-index") * 1, li);
+        this.check(li.getAttribute("data-index") * 1, li);
       }
       //handle clicks on the next button
       if (e.target.className == "next-button") {
@@ -59,6 +59,7 @@ Quiz.prototype = {
     //check answers and apply styling
     var question = this.questions[this.qIndex];
     var answer = question.answers[answerIndex];
+    console.log(answerIndex);
     if (answer.correct) {
       this.score++;
     }
@@ -67,6 +68,8 @@ Quiz.prototype = {
       var index = item.getAttribute("data-index") * 1;
       item.classList.add(question.answers[index].correct ? "right" : "wrong");
     });
+    document.querySelector(".answer-info").classList.add("show");
+    document.querySelector(".its-the").classList.add(answer.correct ? "dexter" : "sinister");
   },
   next() {
     if (this.state != Quiz.ANSWERED) return;

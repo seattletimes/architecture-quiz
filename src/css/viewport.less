@@ -1,0 +1,47 @@
+.viewport {
+  position: relative;
+  overflow: hidden;
+
+  .aspect-outer {
+    width: 100%;
+
+    .aspect-inner {
+      height: 0;
+      padding-bottom: 100%;
+    }
+  }
+
+  max-width: 100%;
+
+  img {
+    position: absolute;
+    max-width: none;
+
+    &.transformed {
+      width: auto !important;
+    }
+
+    &.small {
+      position: relative;
+      width: 100%;
+      transform-origin: top left;
+    }
+
+    &.large {
+      max-width: 100%;
+    }
+  }
+}
+
+.animated-transform {
+  @duration: 1s;
+  transition: -webkit-transform @duration;
+  transition: -moz-transform @duration;
+  transition: -ms-transform @duration;
+  transition: transform @duration;
+}
+
+.animated-fadeout {
+  transition: opacity .4s linear;
+  opacity: 0;
+}

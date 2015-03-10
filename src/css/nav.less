@@ -1,0 +1,39 @@
+nav.top-bar {
+  border-bottom: 1px solid @gray;
+  position: relative;
+  clear: both;
+  z-index: 99;
+
+  @media @mobile {
+    border: none;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    background: @dark-blue;
+  }
+
+  .logo {
+    width: 100%;
+    position: relative;
+    top: 30px;
+    text-align: center;
+    display: block;
+
+    @media @mobile {
+      top: 0;
+    }
+  }
+
+  img {
+    box-sizing: content-box;
+    height: 30px;
+    background: @dark-blue;
+    padding: 10px;
+    border: none;
+
+    @media @mobile {
+      background: none;
+      padding: 5px;  
+    }
+  }
+}
