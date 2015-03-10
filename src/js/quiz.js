@@ -69,7 +69,6 @@ Quiz.prototype = {
     //check answers and apply styling
     var question = this.questions[this.qIndex];
     var answer = question.answers[answerIndex];
-    console.log(answerIndex);
     if (answer.correct) {
       this.score++;
     }
