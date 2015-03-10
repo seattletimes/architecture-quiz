@@ -3,13 +3,19 @@
     <div class="aspect-inner">
       <img src="assets/large/<%= data.image.large.file %>" class="large">
       <img src="assets/small/<%= data.image.small.file %>" class="small">
+      
+      <div class="status">
+        #<%= data.id %> of 12
+      </div>
+
+      <div class="hint">
+        <a class="hint-button"><i class="fa fa-question-circle"></i></a>
+        <span class="hint-text"><%= data.hint %></span>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="status">
-  #<%= data.id %> of 12
-</div>
 
 <div class="answers">
   <ul class="answer-list">

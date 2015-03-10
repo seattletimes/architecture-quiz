@@ -31,6 +31,45 @@
       max-width: 100%;
     }
   }
+
+  .status {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: @df-dark-gray;
+    color: @df-off-white;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  .hint {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    .hint-button {
+      float: right;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      text-shadow: 0 0 black;
+      margin: 4px;
+    }
+
+    .hint-text {
+      display: none;
+      background: @df-dark-gray;
+      color: @df-off-white;
+      font-size: 15px;
+      padding: 8px;
+
+      &.show {
+        display: block;
+      }
+    }
+  }
 }
 
 .animated-transform {

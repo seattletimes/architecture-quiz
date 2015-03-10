@@ -11,9 +11,10 @@ var completed = dot.compile(require("./_complete.html"));
 
 var Quiz = function(data, view) {
   this.view = typeof view == "string" ? document.querySelector(view) : view;
-  this.qIndex = 0;
+  this.qIndex = data.length - 1;
   this.questions = data;
   this.score = 0;
+  this.hintCounter = 0;
   this.state = Quiz.READY;
   this.bind();
   this.render();
@@ -28,6 +29,7 @@ Quiz.prototype = {
   qIndex: null,
   questions: null,
   score: null,
+  hintCounter: null,
   state: null,
   render() {
     if (this.state == Quiz.COMPLETE) {
@@ -49,6 +51,14 @@ Quiz.prototype = {
       //handle clicks on the next button
       if (e.target.className == "next-button") {
         this.next();
+      }
+      //handle clicks on the hint button
+      if (util.closest(e.target, el => el.className == "hint-button")) {
+        var hintText = document.querySelector(".hint-text");
+        if (!hintText.classList.contains("show")) {
+          hintText.classList.add("show");
+          this.hintCounter++;
+        }
       }
     });
   },
