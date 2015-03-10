@@ -11,7 +11,7 @@ var completed = dot.compile(require("./_complete.html"));
 
 var Quiz = function(data, view) {
   this.view = typeof view == "string" ? document.querySelector(view) : view;
-  this.qIndex = data.length - 1;
+  this.qIndex = 0;
   this.questions = data;
   this.score = 0;
   this.hintCounter = 0;
@@ -73,12 +73,12 @@ Quiz.prototype = {
     if (answer.correct) {
       this.score++;
     }
-    li.classList.add("picked");
-    util.qsa(".answer-item", this.view).forEach(item => {
-      var index = item.getAttribute("data-index") * 1;
-      item.classList.add(question.answers[index].correct ? "right" : "wrong");
-    });
-    document.querySelector(".answer-info").classList.add("show");
+    // li.classList.add("picked");
+    // util.qsa(".answer-item", this.view).forEach(item => {
+    //   var index = item.getAttribute("data-index") * 1;
+    //   item.classList.add(question.answers[index].correct ? "right" : "wrong");
+    // });
+    document.querySelector(".answers").classList.add("answered");
     document.querySelector(".its-the").classList.add(answer.correct ? "dexter" : "sinister");
   },
   next() {
