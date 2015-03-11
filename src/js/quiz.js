@@ -16,7 +16,7 @@ var Quiz = function(data, view) {
   this.questions = data;
   this.score = 0;
   this.hintCounter = 0;
-  this.state = Quiz.READY;
+  this.state = Quiz.COMPLETE;
   this.bind();
   this.render();
 };
