@@ -8,6 +8,6 @@ init();
 
 //restart link
 document.querySelector(".quiz-frame").addEventListener("click", function(e) {
-  if (e.target.className != "restart-button") return;
+  if (!e.target.classList.contains("restart-button")) return;
   init();
 });

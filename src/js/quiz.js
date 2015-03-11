@@ -1,5 +1,6 @@
 var zoom = require("./zoom");
 var util = require("./util");
+var Share = require("./lib/share.min");
 
 var dot = require("dot");
 dot.templateSettings.varname = "data";
@@ -34,6 +35,7 @@ Quiz.prototype = {
   render() {
     if (this.state == Quiz.COMPLETE) {
       this.view.innerHTML = completed(this);
+      this.createShare();
       return;
     }
     var q = this.questions[this.qIndex];
@@ -42,23 +44,20 @@ Quiz.prototype = {
   },
   bind() {
     var self = this;
-    this.view.addEventListener("click", (e) => {
-      //handle clicks on answers
-      var li = util.closest(e.target, el => el.classList.contains("answer-item"));
-      if (li && this.state == Quiz.READY) {
-        this.check(li.getAttribute("data-index") * 1, li);
-      }
-      //handle clicks on the next button
-      if (e.target.className == "next-button") {
-        this.next();
-      }
-      //handle clicks on the hint button
-      if (util.closest(e.target, el => el.className == "hint-button")) {
-        var hintText = document.querySelector(".hint-text");
-        if (!hintText.classList.contains("show")) {
-          hintText.classList.add("show");
-          this.hintCounter++;
-        }
+    //handle clicks on answers
+    util.delegate(this.view, "click", ".answer-item", e => {
+      var li = util.closest(e.target, ".answer-item");
+      this.check(li.getAttribute("data-index") * 1, li);
+    });
+    //handle clicks on the next button
+    util.delegate(this.view, "click", ".next-button", e => {
+      this.next();
+    })
+    util.delegate(this.view, "click", ".hint-button", e => {
+      var hintText = document.querySelector(".hint-text");
+      if (!hintText.classList.contains("show")) {
+        hintText.classList.add("show");
+        this.hintCounter++;
       }
     });
   },
@@ -72,11 +71,6 @@ Quiz.prototype = {
     if (answer.correct) {
       this.score++;
     }
-    // li.classList.add("picked");
-    // util.qsa(".answer-item", this.view).forEach(item => {
-    //   var index = item.getAttribute("data-index") * 1;
-    //   item.classList.add(question.answers[index].correct ? "right" : "wrong");
-    // });
     document.querySelector(".answers").classList.add("answered");
     document.querySelector(".its-the").classList.add(answer.correct ? "dexter" : "sinister");
   },
@@ -104,6 +98,9 @@ Quiz.prototype = {
       this.state = state;
       this.view.querySelector(".answers").classList.add("answered");
     });
+  },
+  createShare() {
+    new Share(".share-completed");
   }
 };
 
