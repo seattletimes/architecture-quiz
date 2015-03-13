@@ -1,10 +1,10 @@
-<p class="result-name">Your score: <span class="red"><%= data.score %>/<%= data.questions.length %></span></p>
+<p class="result-name">Your score: <span class="red"><%= data.quiz.score %>/<%= data.quiz.questions.length %></span></p>
 
-<p class="result-name">Hints used: <span class="red"><%= data.hintCounter %></span></p>
+<p class="result-name">Hints used: <span class="red"><%= data.quiz.hintCounter %></span></p>
 
-<p class="result-description">A description will go here after I write the descriptions? I just feel like this page it sort of empty.</p>
+<p class="result-description"><%= data.scoring.message %></p>
 
-<!--<img src="image.jpg" /> I will give you images to put right here -->
+<!--<img src="./assets/<%= data.scoring.image %>" /> I will give you images to put right here -->
 
 <!--<a class="restart-button">Retry quiz</a>-->
 

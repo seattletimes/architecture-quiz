@@ -1,0 +1,38 @@
+[
+  {
+    "title": "12",
+    "correct": "12",
+    "message": "Perfect! You either helped create this quiz, or you should have!",
+    "image": ""
+  },
+  {
+    "title": "10",
+    "correct": "10",
+    "message": "Nice job! You should consider a job in Seattle tourism.",
+    "image": ""
+  },
+  {
+    "title": "7",
+    "correct": "7",
+    "message": "Not bad.",
+    "image": ""
+  },
+  {
+    "title": "4",
+    "correct": "4",
+    "message": "You must be new here. Can we recommend a walking tour? ",
+    "image": ""
+  },
+  {
+    "title": "1",
+    "correct": "1",
+    "message": "Do you even live in Seattle? ",
+    "image": ""
+  },
+  {
+    "title": "0",
+    "correct": "0",
+    "message": "You didn't even try did you? ",
+    "image": ""
+  }
+]

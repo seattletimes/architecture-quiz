@@ -16,7 +16,7 @@ var Quiz = function(data, view) {
   this.questions = data;
   this.score = 0;
   this.hintCounter = 0;
-  this.state = Quiz.COMPLETE;
+  this.state = Quiz.READY;
   this.bind();
   this.render();
 };
@@ -34,7 +34,15 @@ Quiz.prototype = {
   state: null,
   render() {
     if (this.state == Quiz.COMPLETE) {
-      this.view.innerHTML = completed(this);
+      var scores = window.results.sort((a, b) => a.correct - b.correct);
+      var result = {};
+      for (var i = scores.length - 1; i >= 0; i--) {
+        if (this.score >= scores[i].correct * 1) {
+          result = scores[i];
+          break;
+        }
+      }
+      this.view.innerHTML = completed({ quiz: this, scoring: result });
       this.createShare();
       return;
     }
