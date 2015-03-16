@@ -68,7 +68,8 @@ Quiz.prototype = {
     })
     util.delegate(this.view, "click", ".hint-button", e => {
       var hintText = document.querySelector(".hint-text");
-      e.target.parentElement.removeChild(e.target);
+      var button = util.closest(e.target, ".hint-button")
+      button.parentElement.removeChild(button);
       if (!hintText.classList.contains("show")) {
         hintText.classList.add("show");
         this.hintCounter++;
