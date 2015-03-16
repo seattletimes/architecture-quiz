@@ -85,6 +85,8 @@ module.exports = function(image, spec, callback) {
     triggerLayout();
     image.classList.add("animated-fadeout");
     //wait for fade to complete
-    image.addEventListener("transitionend", callback);
+    //image.addEventListener("transitionend", callback);
+    //actually, callback once the zoom finishes
+    callback();
   });
 };

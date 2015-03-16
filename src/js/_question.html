@@ -40,6 +40,12 @@
     <p class="caption"><%= data.caption %></p>
   </div>
 
-  <button class="next-button">Next question</button>
+  <button class="next-button">
+    <% if (data.id * 1 < data.answers.length - 1) { %>
+    Next question
+    <% } else { %>
+    Finish quiz
+    <% } %>
+  </button>
 
 </div>
