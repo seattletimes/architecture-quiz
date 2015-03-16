@@ -4,7 +4,7 @@
     "correct": "12",
     "message": "Perfect! You either helped create this quiz, or you should have! Consider yourself a Seattle architecture buff. ",
     "award": "You get fireworks Space Needle.",
-    "image": "",
+    "image": "fireworks.jpg",
     "credit": "LINDSEY WASSON / The Seattle Times"
   },
   {
@@ -12,7 +12,7 @@
     "correct": "10",
     "message": "Nice job! You should consider a job in Seattle tourism. You really know this city.",
     "award": "You get springtime Space Needle.",
-    "image": "",
+    "image": "springtime.jpg",
     "credit": "Elaine Thompson / The Associated Press"
   },
   {
@@ -20,7 +20,7 @@
     "correct": "7",
     "message": "Not bad. You're no architecture expert, but you have some astute observation skills.",
     "award": "You get sunset Space Needle.",
-    "image": "",
+    "image": "sunset.jpg",
     "credit": "CLIFF DESPEAUX / THE SEATTLE TIMES"
   },
   {
@@ -28,7 +28,7 @@
     "correct": "5",
     "message": "Well, you tried. And that's what counts right?",
     "award": "You get moonlit Space Needle.",
-    "image": "",
+    "image": "moonlit.jpg",
     "credit": "BETTINA HANSEN / The Seattle Times"
   },
   {
@@ -36,7 +36,7 @@
     "correct": "2",
     "message": "You either have never been to Seattle, or you never look up from your phone. ",
     "award": "You get cloudy Space Needle.",
-    "image": "",
+    "image": "cloudy.jpg",
     "credit": "Jim Bates / The Seattle Times"
   },
   {
@@ -44,7 +44,7 @@
     "correct": "0",
     "message": "Come on! You didn't even try did you? ",
     "award": "You get foggy Space Needle.",
-    "image": "",
+    "image": "foggy.jpg",
     "credit": "LINDSEY WASSON / The Seattle Times"
   }
 ]
