@@ -16,9 +16,10 @@
   </div>
 </div>
 
-<p class="credit"><%= data.credit %></p>
+
 
 <div class="answers">
+  <p class="credit"><%= data.credit %></p>
   <ul class="answer-list">
     <% data.answers.forEach(function(item, i) { %>
     <li class="answer-item" data-index=<%= i %>> <label><%= item.answer %></label>

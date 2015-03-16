@@ -12,7 +12,7 @@ var completed = dot.compile(require("./_complete.html"));
 
 var Quiz = function(data, view) {
   this.view = typeof view == "string" ? document.querySelector(view) : view;
-  this.qIndex = 8;
+  this.qIndex = 0;
   this.questions = data;
   this.score = 0;
   this.hintCounter = 0;

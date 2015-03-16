@@ -59,27 +59,26 @@
   }
 }
 
-
-.credit {
-  margin: 0;
-  float: right;
-  font-size: 12px;
-  font-family: Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  color: @dark-gray;
-
-  a {
-    color: @dark-gray;
-    text-decoration: none;
-    border-bottom: 1px dotted;
-  }
-}
-
 .answers {
   color: @dark-gray;
   font-family: @body;
   font-size: 1em;
-  margin: 1em auto;
+  margin: 0 auto;
+  
+  .credit {
+    display: none;
+    float: right;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: @dark-gray;
+
+    a {
+      color: @dark-gray;
+      text-decoration: none;
+      border-bottom: 1px dotted;
+    }
+  }
 
   .answer-info {
     display: none;
@@ -89,11 +88,19 @@
     .answer-list {
       display: none;
     }
+    .credit {
+      display: inline;
+    }
 
     .answer-info {
       display: block;
     }
+
   }
+
+  
+  
+
 
   .hint-button {
     text-transform: uppercase;
@@ -125,6 +132,8 @@
     font-size: 25px;
     text-align: center;
     color: @df-dark-gray;
+    clear:both;
+
 
     .wrong {
       color: @red;
