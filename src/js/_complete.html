@@ -2,13 +2,13 @@
 
 <p class="result-name">Hints used: <span class="red"><%= data.quiz.hintCounter %></span></p>
 
-<p class="result-description">Nice job! You should consider a job in Seattle tourism. You really know this city.</p>
+<p class="result-description"><%= data.scoring.message %></p>
 
-<p class="award">You get springtime Space Needle.</p>
+<p class="award"><%= data.scoring.award %></p>
 
 <section class="result-image">
-  <img src="./assets/results/springtime.jpg">
-  <p class="credit">Elaine Thompson / The Associated Press</p>
+  <img src="./assets/results/<%= data.scoring.image %>">
+  <p class="credit"><%= data.scoring.credit %></p>
 </section>
 
 <!--<a class="restart-button">Retry quiz</a>-->
