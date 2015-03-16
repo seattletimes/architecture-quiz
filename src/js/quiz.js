@@ -68,6 +68,7 @@ Quiz.prototype = {
     })
     util.delegate(this.view, "click", ".hint-button", e => {
       var hintText = document.querySelector(".hint-text");
+      e.target.parentElement.removeChild(e.target);
       if (!hintText.classList.contains("show")) {
         hintText.classList.add("show");
         this.hintCounter++;
@@ -84,6 +85,8 @@ Quiz.prototype = {
     if (answer.correct) {
       this.score++;
     }
+    var hint = document.querySelector(".hint");
+    hint.parentElement.removeChild(hint);
     document.querySelector(".answers").classList.add("answered");
     document.querySelector(".its-the").classList.add(answer.correct ? "dexter" : "sinister");
   },
