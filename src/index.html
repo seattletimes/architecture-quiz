@@ -74,9 +74,14 @@ json.ArchitectureQuiz_answers.forEach(function(row) {
   delete row.title;
   questions[row.question].answers.push(row);
 });
+json.ArchitectureQuiz_messages.forEach(function(row) {
+  row.correct *= 1;
+  delete row.title;
+});
 %>
 window.imageList = <%= JSON.stringify(images) %>;
 window.quizData = <%= JSON.stringify(json.ArchitectureQuiz_questions) %>;
+window.results = <%= JSON.stringify(json.ArchitectureQuiz_messages) %>;
     </script>
     <script src="app.js"></script>
     <% /*= t.include("partials/_adFoot.html"); */ %>

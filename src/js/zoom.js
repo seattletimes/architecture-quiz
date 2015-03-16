@@ -6,6 +6,10 @@ var transProp =
   "transform";
 var wait = require("./util").wait;
 
+var triggerLayout = function() {
+  return document.body.offsetTop;
+};
+
 /*
 Transforming the small image to the big one is a three-stage process:
 
@@ -74,9 +78,11 @@ module.exports = function(image, spec, callback) {
   //figure out the current size, and apply transformation
   freezeAsTransform(image, spec);
   image.classList.add("animated-transform");
+  triggerLayout();
   zoomToScale(image, spec);
   wait(1000, function() {
     freezeAsWidth(image, spec);
+    triggerLayout();
     image.classList.add("animated-fadeout");
     //wait for fade to complete
     image.addEventListener("transitionend", callback);
