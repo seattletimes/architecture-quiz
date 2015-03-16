@@ -49,6 +49,11 @@ Quiz.prototype = {
     var q = this.questions[this.qIndex];
     var html = template(q);
     this.view.innerHTML = html;
+    var self = this;
+    //hide larger image until the regular image loads
+    this.view.querySelector("img.small").addEventListener("load", function() {
+      self.view.querySelector(".viewport").classList.remove("loading");
+    });
   },
   bind() {
     var self = this;
