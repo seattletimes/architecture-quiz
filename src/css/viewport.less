@@ -16,6 +16,8 @@
   img {
     position: absolute;
     max-width: none;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
 
     &.transformed {
       width: auto !important;
@@ -31,7 +33,7 @@
       max-width: 100%;
     }
   }
-  
+
   &.loading {
     img.large {
       display: none;

@@ -27,7 +27,10 @@ width/top/left to the small image to freeze it in place responsively
 */
 
 var transform = function(x, y, s) {
-  return `translate( ${x}px, ${y}px) scale(${s})`;
+  x = Math.round(x);
+  y = Math.round(y);
+  s = s.toFixed(5);
+  return `translateX(${x}px) translateY(${y}px) scale(${s}) `;
 };
 
 var triggerLayout = function() {
@@ -44,6 +47,7 @@ var freezeAsTransform = function(image, spec) {
 };
 
 var zoomToScale = function(image, spec) {
+  triggerLayout();
   var keyframe = spec.keyframe;
   var size = image.getBoundingClientRect().width;
   var rescaled = {
@@ -78,7 +82,6 @@ module.exports = function(image, spec, callback) {
   //figure out the current size, and apply transformation
   freezeAsTransform(image, spec);
   image.classList.add("animated-transform");
-  triggerLayout();
   zoomToScale(image, spec);
   wait(1200, function() {
     freezeAsWidth(image, spec);
