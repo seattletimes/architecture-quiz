@@ -80,9 +80,8 @@ module.exports = function(image, spec, callback) {
   image.classList.add("animated-transform");
   triggerLayout();
   zoomToScale(image, spec);
-  wait(1000, function() {
+  wait(1200, function() {
     freezeAsWidth(image, spec);
-    triggerLayout();
     image.classList.add("animated-fadeout");
     //wait for fade to complete
     //image.addEventListener("transitionend", callback);

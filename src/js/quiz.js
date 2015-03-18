@@ -99,6 +99,7 @@ Quiz.prototype = {
     }
     this.render();
     this.state = Quiz.READY;
+    window.location.hash = "quiz";
   },
   complete() {
     this.state = Quiz.COMPLETE;
