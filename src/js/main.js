@@ -1,3 +1,5 @@
+require("./lib/ads");
+
 var Quiz = require("./quiz");
 
 var init = function() {

@@ -9,10 +9,13 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Paytone+One|Oswald:700,400,300|PT+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <%= t.include("partials/_adHead.html") %>
   </head>
   <body>
 
-      <nav class="top-bar">
+    <%= t.include("partials/_ad.html", { type: "banner" }) %>
+
+    <nav class="top-bar">
       <a class="logo" href="http://seattletimes.com">
         <img src="http://static.seattletimes.com/wp-content/uploads/2015/03/st-logo.png">
       </a>
@@ -28,13 +31,19 @@
     </header>
 
     <main class="wrapper">
-      <div class="chatter">
-        
-      </div>
       <div class="quiz-frame"></div>
     </main>
 
+    <div class="credits">
+       Quiz by <span class="credit-name">Aaron Spencer</span>,
+       web development by <span class="credit-name">Thomas Wilburn</span>,
+       illustration by <span class="credit-name">Gabriel Campanario</span>
+    </div>
+    <div class="thanks">
+       Special thanks to <span class="thanks-name">Larry Kreisman</span> of <a href="http://historicseattle.org/">Historic Seattle</a> and  <span class="thanks-name">Karen Whitney</span> of <a href="http://seattlearchitecture.org/">Seattle Architecture Foundation</a>.
+    </div>
 
+    <%= t.include("partials/_ad.html", { type: "bannerBottom" }) %>
 
     <script>
 <%
@@ -84,16 +93,7 @@ window.quizData = <%= JSON.stringify(json.ArchitectureQuiz_questions) %>;
 window.results = <%= JSON.stringify(json.ArchitectureQuiz_messages) %>;
     </script>
     <script src="app.js"></script>
-    <% /*= t.include("partials/_adFoot.html"); */ %>
+    <%= t.include("partials/_adFoot.html") %>
     <%= t.include("partials/_workHere.html") %>
   </body>
-
-   <div class="credits">
-        Quiz by <span class="credit-name">Aaron Spencer</span>,
-        web development by <span class="credit-name">Thomas Wilburn</span>,
-        illustration by <span class="credit-name">Gabriel Campanario</span>
-      </div>
-   <div class="thanks">
-        Special thanks to <span class="thanks-name">Larry Kreisman</span> of <a href="http://historicseattle.org/">Historic Seattle</a> and  <span class="thanks-name">Karen Whitney</span> of <a href="http://seattlearchitecture.org/">Seattle Architecture Foundation</a>.
-      </div>
 </html>
