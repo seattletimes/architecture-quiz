@@ -47,7 +47,7 @@ Quiz.prototype = {
       return;
     }
     var q = this.questions[this.qIndex];
-    var html = template(q);
+    var html = template({ question: q, quiz: this });
     this.view.innerHTML = html;
     var self = this;
     //hide larger image until the regular image loads
