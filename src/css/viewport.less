@@ -32,12 +32,6 @@
     }
   }
 
-  &.loading {
-    img.large {
-      display: none;
-    }
-  }
-
   .status {
     position: absolute;
     width: 100%;
@@ -55,6 +49,8 @@
     width: 100%;
     bottom: 0;
     left: 0;
+    background: @df-dark-gray;
+    opacity: 0.8;
 
     .hint-button {
       float: right;
@@ -62,7 +58,7 @@
       cursor: pointer;
       font-size: 80%;
       position: relative;
-      text-shadow: 2px 2px 8px black;
+      text-shadow: 0 0 black;
       margin: 4px;
     }
 
@@ -75,8 +71,6 @@
 
       &.show {
         display: block;
-        opacity: 0.8;
-
       }
     }
   }
