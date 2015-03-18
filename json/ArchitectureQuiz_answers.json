@@ -122,25 +122,25 @@
   {
     "title": "6",
     "question": "6",
+    "answer": "Two Union Square",
+    "correct": ""
+  },
+  {
+    "title": "6",
+    "question": "6",
+    "answer": "Space Needle",
+    "correct": ""
+  },
+  {
+    "title": "6",
+    "question": "6",
     "answer": "Columbia Center",
     "correct": ""
   },
   {
     "title": "6",
     "question": "6",
-    "answer": "1201 Third Avenue",
-    "correct": ""
-  },
-  {
-    "title": "6",
-    "question": "6",
-    "answer": "Speed Stick Building",
-    "correct": ""
-  },
-  {
-    "title": "6",
-    "question": "6",
-    "answer": "Second and Seneca Building",
+    "answer": "EMP Museum",
     "correct": "x"
   },
   {
@@ -266,25 +266,25 @@
   {
     "title": "12",
     "question": "12",
-    "answer": "Norton Building",
+    "answer": "St. Nicholas Russian Orthodox Cathedral",
     "correct": "x"
   },
   {
     "title": "12",
     "question": "12",
-    "answer": "Westin Building",
+    "answer": "Chapel of St. Ignatius",
     "correct": ""
   },
   {
     "title": "12",
     "question": "12",
-    "answer": "Aspira",
+    "answer": "Greek Orthodox Church of the Assumption",
     "correct": ""
   },
   {
     "title": "12",
     "question": "12",
-    "answer": "Qwest Plaza",
+    "answer": "St. Spiridon Orthodox Cathedral",
     "correct": ""
   }
 ]

@@ -62,14 +62,14 @@
   {
     "id": "6",
     "title": "6",
-    "image": "second-seneca",
-    "hint": "It won’t wear off as the day wears on! Or so goes the jingle for the product that shares a resemblance to this building.",
-    "credit": "MAX FEINGOLD",
-    "reveal": "It’s the Second and Seneca Building.",
-    "caption": "Finished just before the bust of the ‘80s building boom, the Second and Seneca building is an example of architects’ attempts to break out of the boring, box-like forms most developers wanted and instead follow trends of postmodern architecture. That led ZGF Architects to design the blue-green glass dome that would forever trap the building in the ‘80s. The public dubbed the highrise the “Ban Roll-On building,” after a deodorant that’s as absent nowadays as Crystal Pepsi. Coincidentally, another dome-topped building was erected in Portland the same year — and Portlanders gave it the same nickname.",
-    "location": "Downtown, 1191 Second Ave.",
-    "designer": "Zimmer Gunsul Frasca Architects",
-    "completed": "1991"
+    "image": "emp",
+    "hint": "Remember, it's a close up of the building (not the reflection)!",
+    "credit": "Aaron Spencer / The Seattle Times",
+    "reveal": "It’s the EMP Museum.",
+    "caption": "The metal finish in a color called \"shimmering Purple Haze\" is a fitting exterior for home of the world's largest collection of Jimi Hendrix collectibles. Gehry even got inspiration for the design from a smashed guitar. Man people consider the building hideous, but it endures. ",
+    "location": "Seattle Center, 325 Fifth Ave. N",
+    "designer": "Frank Gehry",
+    "completed": "2000"
   },
   {
     "id": "7",
@@ -134,13 +134,13 @@
   {
     "id": "12",
     "title": "12",
-    "image": "norton",
-    "hint": "Built in 1959, it was the first highrise in Seattle made with glass walls.",
-    "credit": "<a href=\"https://www.flickr.com/photos/26861346@N00/\">MATTHEW MCQUILKIN</a>",
-    "reveal": "It’s the Norton Building.",
-    "caption": "Glass curtain walls were signatures of the International style, which grew in popularity during World War II. Engineers were just figuring out how to construct “modern” buildings with glass walls. The Norton Building is the first highrise in Seattle built in this style, and probably the finest; a student of legendary architect Mies van der Rohe contributed to the design. It was the first highrise built after the war (a whole 30 years after the previous one) and was noted for its unique composition of hundreds of gray and blue glass panels.",
-    "location": "Downtown, 801 Second Ave.",
-    "designer": "Bindon & Wright; Skidmore, Owings & Merrill; LMN Architects",
-    "completed": "1959"
+    "image": "cathedral",
+    "hint": "This church is one of the remaining architectural quirks of Capitol Hill.",
+    "credit": "Aaron Spencer / The Seattle Times",
+    "reveal": "It’s St. Nicholas Russian Orthodox Cathedral.",
+    "caption": "The onion dome was a staple of Russian Orthodox churches, starting in the seventeenth century. They are popularly believed to symbolize burning candles.",
+    "location": "Capitol Hill, 1714 13th Ave.",
+    "designer": "Unknown",
+    "completed": "1937"
   }
 ]
