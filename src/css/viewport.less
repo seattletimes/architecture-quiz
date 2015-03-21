@@ -45,26 +45,31 @@
     width: 100%;
     top: 0;
     left: 0;
-    background: @df-dark-gray;
-    color: @df-off-white;
+    color: red;
+    color: @df-off-white; 
     font-size: 14px;
     text-align: right;
-    opacity: 0.8;
+    opacity: 0.9;
+    padding: 8px;
+
   }
 
   .hint {
     position: absolute;
-    width: 100%;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 6px;
+    padding: 5px;
     bottom: 0;
-    left: 0;
+    right: 0;
     background: @df-dark-gray;
-    opacity: 0.8;
+    opacity: 0.9;
+    margin: 15px;
 
     .hint-button {
       float: right;
       color: white;
       cursor: pointer;
-      font-size: 80%;
+      font-size: 90%;
       position: relative;
       text-shadow: 0 0 black;
       margin: 4px;
@@ -74,7 +79,7 @@
       display: none;
       background: @df-dark-gray;
       color: @df-off-white;
-      font-size: 15px;
+      font-size: 18px;
       padding: 8px 15px;
 
       &.show {
