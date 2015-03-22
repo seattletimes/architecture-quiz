@@ -6,7 +6,7 @@
     "hint": "It’s received more praise than any architectural work in Seattle in the past decade.",
     "credit": "BENJAMIN BENSCHNEIDER / THE SEATTLE TIMES, 2004",
     "reveal": "It’s the Seattle Public Library.",
-    "caption": "The diamond-shaped glass panels on the outside of the Seattle Public Library are made differently depending on where they are. The glass is clear on parts of the building that don’t see much sun, but on the sunny parts the glass includes a layer of thin metal that reduces heat. (The library was the first building in the U.S. built with this technique.) The sun sees the glass as opaque, but from the inside, the glass looks transparent. The inside, after all, is where the real design zaniness lies, and if you’ve seen those Kubrick-esque red hallways — you know that’s another story.",
+    "caption": "The diamond-shaped glass panels on the outside of the Seattle Public Library are made differently depending on where they are. The glass is clear on parts of the building that don’t see much sun, but on the sunny parts the glass includes a layer of thin metal that reduces heat. The sun sees the glass as opaque, but from the inside, the glass looks transparent. ",
     "location": "Downtown, 1000 Fourth Ave.",
     "designer": "Rem Koolhaas and Joshua Prince-Ramus",
     "completed": "2004"
@@ -18,7 +18,7 @@
     "hint": "It was the tallest building in Seattle when it was built (a century ago).",
     "credit": "<a href=\"https://www.flickr.com/photos/tigerzombie/\">ROB KETCHERSIDE</a>",
     "reveal": "It’s Smith Tower.",
-    "caption": "Smith Tower’s crowning pyramid, with its Gothic arched dormers (the windows), takes after the <a href=\"https://www.google.com/search?q=metropolitan+life+tower&espv=2&biw=1280&bih=678&source=lnms&tbm=isch&sa=X&ei=EE-SVPGVCM6pogTwsoKgCw&ved=0CAYQ_AUoAQ\">Metropolitain Life Tower in Manhattan</a>. The developer, Lyman Cornelius Smith, and his architects were from Syracuse, and they fashioned Smith Tower after the New York “mounted tower” form: a substantial base with a slender tower. Smith also wanted to make the building as tall as possible, so he probably noticed the two tallest buildings in Syracuse had pyramid tops. What’s inside the pyramid today? Probably the most <a href=\"http://seattletimes.com/html/homegarden/2013215354_penthouse21.html\">perfect penthouse apartment in Seattle</a>.",
+    "caption": "Smith Tower’s crowning pyramid, with its Gothic arched dormers (the windows), takes after the <a href=\"https://www.google.com/search?q=metropolitan+life+tower&espv=2&biw=1280&bih=678&source=lnms&tbm=isch&sa=X&ei=EE-SVPGVCM6pogTwsoKgCw&ved=0CAYQ_AUoAQ\" target=\"_blank\">Metropolitain Life Tower in Manhattan</a>. The developer, Lyman Cornelius Smith, and his architects were from Syracuse, and they fashioned Smith Tower after the New York “mounted tower” form: a substantial base with a slender tower. What’s inside the pyramid today? Probably the most <a href=\"http://seattletimes.com/html/homegarden/2013215354_penthouse21.html\" target=\"_blank\">perfect penthouse apartment in Seattle</a>.",
     "location": "Pioneer Square, 506 Second Ave.",
     "designer": "Edwin H. Gaggin and T. Walker Gaggin",
     "completed": "1914"
@@ -66,7 +66,7 @@
     "hint": "Remember, it's a close up of the building (not the reflection)!",
     "credit": "Aaron Spencer / The Seattle Times",
     "reveal": "It’s the EMP Museum.",
-    "caption": "The metallic color called \"shimmering Purple Haze\" finishes the exterior of the EMP Museum, which houses memorabilia of Jimi Hendrix and Nirvana. The blob-like shape of the building is still considered hideous by many, but it was inspired in part by a smashed guitar.",
+    "caption": "The metallic color called \"shimmering Purple Haze\" finishes the exterior of the EMP Museum, which houses memorabilia of Jimi Hendrix and Nirvana. The blob-like shape of the building is still considered hideous by many, but it's inspiration is on point: Frank Gehry used broken pieces of electric guitars to create the initial design.",
     "location": "Seattle Center, 325 Fifth Ave. N",
     "designer": "Frank Gehry",
     "completed": "2000"
@@ -99,10 +99,10 @@
     "id": "9",
     "title": "9",
     "image": "1201-third",
-    "hint": "Many people weren’t sure what to think of this building when it was finished in 1998, and no one ever came up with a good name for it.",
-    "credit": " <a href=\"http://www.tonyjollyimages.com/seattle-3.shtml\">TONY JOLLY</a>, DEAN RUTZ / THE SEATTLE TIMES, 2012",
+    "hint": "You might recognize this as the Washington Mutual Building, but now its name is more generic.",
+    "credit": "<a href=\"http://www.tonyjollyimages.com/seattle-3.shtml\">TONY JOLLY</a>, DEAN RUTZ / THE SEATTLE TIMES, 2012",
     "reveal": "It’s 1201 Third Avenue.",
-    "caption": "Seattle’s second-tallest highrise (<a href=\"http://seattletimes.com/html/businesstechnology/2024952784_rainiersquarexml.html\">for now</a>) was contentious when it was finished in 1988, and not only because of its height. Its post-modern design, en vogue at the time, was polarizing. It mixes modern sleekness and traditional details, and the design winks at surrounding buildings: the pyramid top, capped by a lantern, recalls the tops of buildings like Smith Tower and Harborview Medical Center. Critics called it a cliché that would be dated in 10 years, but it remains popular.",
+    "caption": "Though you might recognize this building as the Washington Mutual Building, that financial company moved across the street to the WaMu Center in 2006. But 1201 Third Avenue is still Seattle’s second-tallest highrise (<a href=\"http://seattletimes.com/html/businesstechnology/2024952784_rainiersquarexml.html\" target=\"_blank\">for now</a>), and its post-modern design remains popular. It mixes modern sleekness and traditional details, and the design winks at surrounding buildings: the pyramid top, capped by a lantern, recalls the tops of buildings like Smith Tower and Harborview Medical Center.",
     "location": "Downtown, 1201 Third Avenue",
     "designer": "Bill Pedersen (Kohn Pedersen Fox Associates) and The McKinley Architects",
     "completed": "1988"
@@ -114,7 +114,7 @@
     "hint": "Beaver Building",
     "credit": "<a href=\"https://www.flickr.com/photos/evandagan/\">Evan Chakroff</a>",
     "reveal": "It’s Rainier Tower.",
-    "caption": "Modernist buildings are about form, not decoration, but Minoru Yamasaki tended to add decorative elements to his buildings anyway (he was criticized for adding non-functional, or “fake,” arches to the IBM building). The porcelain ceramic tiles on the base of Rainier Tower do have a function — they’re easier to clean than the underlying concrete — but they also make the building more interesting without interrupting its lines. The tiny gray hooks on the base may look like ornamentation, but they also have a purpose: the cleaners use them to climb.",
+    "caption": "The \"Beaver Building\" nickname comes from the building's stem-like base, which looks kind of like a nawed tree. The base is covered with porcelain ceramic tiles, a decorative element that also makes the building eaier to clean. Minoru Yamasaki tended to add decorative elements to his buildings, which was against the tenets of modern design (he was criticized for adding non-functional, or “fake,” arches to the IBM building). The tiny gray hooks on the base of Rainier Tower may look like ornamentation, too, but they also have a purpose: the cleaners use them to climb.",
     "location": "Downtown, 1333 Fifth Ave.",
     "designer": "Minoru Yamasaki, NBBJ",
     "completed": "1977"
@@ -136,7 +136,7 @@
     "title": "12",
     "image": "cathedral",
     "hint": "This church is one of the remaining architectural quirks of Capitol Hill.",
-    "credit": "Aaron Spencer / The Seattle Times",
+    "credit": "Courtney Blethen Riffkin / The Seattle Times",
     "reveal": "It’s St. Nicholas Russian Orthodox Cathedral.",
     "caption": "The onion dome was a staple of Russian Orthodox churches, starting in the seventeenth century. They are popularly believed to symbolize burning candles.",
     "location": "Capitol Hill, 1714 13th Ave.",

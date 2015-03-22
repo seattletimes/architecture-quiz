@@ -56,14 +56,15 @@
 
   .hint {
     position: absolute;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 6px;
-    padding: 5px;
+    /*-moz-border-radius: 15px;*/
+    /*-webkit-border-radius: 6px;*/
+    
     bottom: 0;
     right: 0;
     background: @df-dark-gray;
     opacity: 0.9;
     margin: 15px;
+
 
     .hint-button {
       float: right;
@@ -72,8 +73,14 @@
       font-size: 90%;
       position: relative;
       text-shadow: 0 0 black;
-      margin: 4px;
+      padding: 9px;
+
+      @media @mobile {
+        font-size: 130%;
+        padding: 15px;
+      }
     }
+
 
     .hint-text {
       display: none;
