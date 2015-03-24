@@ -74,6 +74,10 @@
   font-family: @body;
   font-size: 1em;
   margin: 0 auto;
+
+  @media @mobile {
+    padding: 0 5px;
+  }
   
   .credit {
     display: none;
@@ -105,12 +109,7 @@
     .answer-info {
       display: block;
     }
-
   }
-
-  
-  
-
 
   .hint-button {
     text-transform: uppercase;
@@ -143,7 +142,6 @@
     text-align: center;
     color: @df-dark-gray;
     clear:both;
-
 
     .wrong {
       color: @red;
