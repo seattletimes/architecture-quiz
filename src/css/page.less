@@ -9,7 +9,7 @@ header {
     font-family: @block;
     font-weight: normal;
     color: white;
-    background: @dark-gray;
+    background: @dark-blue;
     display: inline-block;
     padding: 5px;
     margin: 5px auto 0;
@@ -21,26 +21,24 @@ header {
 
   .title {
     font-family: @block;
-    color: @dark-blue;
+    color: @dark-gray;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 1.2em;
-    margin: 5px auto 0.5em;
+    margin: 5px auto;
 
     @media @mobile {
+      font-size: 1.8em;
       line-height: 1em;
       margin-bottom: 0;
     }
 
     .red {
       font-size: 1.7em;
+      line-height: 1em;
       display: block;
       color: @red;
-
-      @media @mobile {
-        font-size: inherit;
-      }
     }
   }
 
@@ -49,7 +47,7 @@ header {
     font-family: @body;
     font-size: 1.2em;
     text-align: center;
-    margin: 1em auto;
+    margin: 0.5em auto 1em;
     max-width: 840px;
   }
 }
