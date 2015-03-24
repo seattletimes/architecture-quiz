@@ -75,10 +75,7 @@
   font-size: 1em;
   margin: 0 auto;
 
-  @media @mobile {
-    padding: 0 15px;
-    font-size: 1.4em;
-  }
+  
   
   .credit {
     display: none;
@@ -98,6 +95,8 @@
   .answer-info {
     display: none;
   }
+
+    
 
   &.answered {
     .answer-list {
@@ -134,6 +133,11 @@
     margin: 0;
     list-style-type: none;
     text-align: left;
+
+    @media @mobile {
+      padding: 0 15px;
+      font-size: 1.3em;
+    }
   }
 
   .its-the {
@@ -145,7 +149,7 @@
     clear:both;
 
     @media @tablet {
-      font-size: 28px;
+      font-size: 29px;
     }
 
     .wrong {
@@ -169,5 +173,10 @@
 
   .caption {
     text-align: left;
+
+    @media @mobile {
+      padding: 0 15px;
+      font-size: 1.4em;
+    }
   }
 }
