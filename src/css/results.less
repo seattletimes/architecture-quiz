@@ -1,8 +1,16 @@
+@import "values";
+
+.results-page {
+  padding: 8px;
+}
+
 .result-name {
   font-family: @block;
   color: @dark-gray;
+  display: inline-block;
   font-size: 2em;
   line-height: 1.2em;
+  width: ~"calc(50% - 8px)";
   margin: 10px 0;
 
   @media @mobile {
@@ -10,19 +18,17 @@
   }
 }
 
-
 .award {
   font-family: @block;
   color: @dark-gray;
-  font-size: 1.9em;
+  font-size: 2em;
   line-height: 1.2em;
-  margin: 10px 0;
-  text-align: center;
+  margin: 1em 0 0;
 }
 
 .result-description {
   font-family: @body;
-  margin: 2em auto;
+  margin: 5px auto;
   font-size: 1.2em;
   color: @dark-gray;
     
@@ -32,27 +38,27 @@
 }
 
 .red {
-color: @red;
+  color: @red;
 }
 
 .credit {
-  margin: 0;
+  margin: 2px;
   float: right;
   font-size: 12px;
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: @dark-gray;
-  .a {color: @dark-gray;
+
+  a {
+    color: @dark-gray;
   }
-}
-.share-completed {
-  margin: 4em auto;
 }
 
 .result-image {
   margin: auto;
   width: 720px;
   max-width: 100%;
+
   img {
     max-width: 100%;
   }

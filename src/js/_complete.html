@@ -1,16 +1,18 @@
-<p class="result-name">Your score: <span class="red"><%= data.quiz.score %>/<%= data.quiz.questions.length %></span></p>
+<div class="results-page">
 
-<p class="result-name">Hints used: <span class="red"><%= data.quiz.hintCounter %></span></p>
+  <p class="result-name">Your score: <span class="red"><%= data.quiz.score %>/<%= data.quiz.questions.length %></span></p>
 
-<p class="result-description"><%= data.scoring.message %></p>
+  <p class="result-name">Hints used: <span class="red"><%= data.quiz.hintCounter %></span></p>
 
-<p class="award"><%= data.scoring.award %></p>
+  <p class="award"><%= data.scoring.award %></p>
 
-<section class="result-image">
-  <img src="./assets/results/<%= data.scoring.image %>">
-  <p class="credit"><%= data.scoring.credit %></p>
-</section>
+  <p class="result-description"><%= data.scoring.message %></p>
 
-<!--<a class="restart-button">Retry quiz</a>-->
+  <section class="result-image">
+    <img src="./assets/results/<%= data.scoring.image %>">
+    <p class="credit"><%= data.scoring.credit %></p>
+  </section>
 
-<a class="share-completed"></a>
+  <!--<a class="restart-button">Retry quiz</a>-->
+
+</div>
