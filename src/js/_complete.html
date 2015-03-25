@@ -1,16 +1,18 @@
 <div class="results-page">
 
-  <p class="result-name">Your score: <span class="red"><%= data.quiz.score %>/<%= data.quiz.questions.length %></span></p>
+  <p><a class="share-completed share"></a>
 
-  <p class="result-name">Hints used: <span class="red"><%= data.quiz.hintCounter %></span></p>
+  <p class="result-name">Score: <span class="red"><%= data.quiz.score %>/<%= data.quiz.questions.length %></span>
 
-  <p class="award"><%= data.scoring.award %></p>
+  <p class="result-name">Hints used: <span class="red"><%= data.quiz.hintCounter %></span>
 
-  <p class="result-description"><%= data.scoring.message %></p>
+  <p class="award"><%= data.scoring.award %>
+
+  <p class="result-description"><%= data.scoring.message %>
 
   <section class="result-image">
     <img src="./assets/results/<%= data.scoring.image %>">
-    <p class="credit"><%= data.scoring.credit %></p>
+    <p class="credit"><%= data.scoring.credit %>
   </section>
 
   <!--<a class="restart-button">Retry quiz</a>-->

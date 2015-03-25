@@ -7,23 +7,25 @@
 .result-name {
   font-family: @block;
   color: @dark-gray;
+  text-transform: uppercase;
   display: inline-block;
-  font-size: 2em;
+  font-size: 1.8em;
   line-height: 1.2em;
   width: ~"calc(50% - 8px)";
-  margin: 10px 0;
+  margin: 5px 0;
 
   @media @mobile {
-    font-size: 1.8em;
+    width: 100%;
   }
 }
 
 .award {
-  font-family: @block;
+  font-family: @body;
+  font-weight: 700;
   color: @dark-gray;
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 1.2em;
-  margin: 1em 0 0;
+  margin: 20px 0 0;
 }
 
 .result-description {
@@ -31,10 +33,6 @@
   margin: 5px auto;
   font-size: 1.2em;
   color: @dark-gray;
-    
-  @media @mobile {
-    font-size: 1.8em;
-  }
 }
 
 .red {
@@ -64,3 +62,27 @@
   }
 }
 
+// SHARE BUTTON
+
+.share {
+
+  &.sharer-0 {
+
+    label {
+      border-radius: 0 !important;
+      background: @dark-blue !important;
+      transition: background .1s linear;
+      color: white !important;
+
+      span {
+        font-family: @block !important;
+        font-weight: normal !important;
+        font-size: 1em !important;
+      }
+
+      &:hover {
+        background: @dark-gray !important;
+      }
+    }
+  }
+}
