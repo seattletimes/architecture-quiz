@@ -5,21 +5,7 @@
   box-sizing: border-box;
 }
 
-@mobile: ~"(max-width: 480px)";
-@tablet: ~"(max-width: 768px)";
-@blue: #164c75;
-@green: #35755b;
-@gray: #AAA;
-@dark-gray: #555;
-@block: 'Paytone One', sans-serif;
-@narrow: 'Oswald', sans-serif;
-@dark-blue: #13628d;
-@red: #8e3724;
-@body: 'PT Sans', sans-serif;
-@narrow: 'Oswald', sans-serif;
-
 @import "seattletimes";
-@import "values";
 @import "nav";
 @import "answers";
 @import "page";
@@ -57,15 +43,13 @@ main.wrapper {
   display: none;
   border: none;
   background: @dark-blue;
+  transition: background-color 0.1s linear;
   color: @df-off-white;
   padding: 8px;
   font-family: @block;
   font-weight: normal;
-  font-size: 25px;
-  
-    @media @tablet {
-      font-size: 29px;
-    }
+  font-size: 20px;
+  text-transform: uppercase;
 
   &:hover {
       background: @df-dark-gray;
@@ -88,7 +72,6 @@ main.wrapper {
   text-align: center;
   padding-bottom: 30px;
   margin: 0 auto;
-  max-width: 600px;
   
   .credit-name {
     font-weight: 700;
@@ -104,8 +87,6 @@ main.wrapper {
     border-bottom: 1px dotted;
   }
 }
-
-
 
 .ad {
   height: 90px;
