@@ -7,7 +7,7 @@
       <img src="assets/large/<%= data.question.image.large.file %>" class="large">
       <img src="assets/small/<%= data.question.image.small.file %>" class="small">
       <div class="status">
-        No. <%= data.quiz.qIndex + 1 %> of 12
+        <%= data.quiz.qIndex + 1 %>/12
       </div>
       
 
@@ -45,7 +45,7 @@
 
   <button class="next-button">
     <% if (data.quiz.qIndex < data.quiz.questions.length - 1) { %>
-    Next question
+    Next question <i class="fa fa-arrow-right"></i>
     <% } else { %>
     Finish quiz
     <% } %>
