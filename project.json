@@ -5,13 +5,13 @@
       "path": "funky-edifice"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2015/seattle-architecture-quiz"
     }
   },
   "title": "How well do you know Seattle’s architecture?",
   "description": "",
-  "url": "",
-  "slug": "",
+  "url": "http://projects.seattletimes.com/2015/seattle-architecture-quiz/",
+  "slug": "seattle-architecture-quiz",
   "tags": ["Seattle", "architecture", "buildings", "quiz", "real-estate"]
 }
