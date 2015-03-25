@@ -119,7 +119,7 @@ Quiz.prototype = {
   },
   createShare() {
     //sets up the sharing at the end
-    var description = "I got " + this.score + " out of " + this.questions.length + " on the Seattle Times Architecture quiz! How will you do?";
+    var description = "I got " + this.score + " out of " + this.questions.length + " on the Seattle Times architecture quiz! How will you do?";
     var url = window.location.href;
     new Share(".share-completed", {
       description: description,

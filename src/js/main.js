@@ -13,3 +13,17 @@ document.querySelector(".quiz-frame").addEventListener("click", function(e) {
   if (!e.target.classList.contains("restart-button")) return;
   init();
 });
+
+var Share = require("share");
+
+new Share(".share", {
+  ui: {
+    flyout: "top right"
+  },
+  networks: {
+    email: {
+      enabled: true,
+      description: "http://projects.seattletimes.com/2015/seattle-architecture-quiz/"
+    }
+  }
+});
