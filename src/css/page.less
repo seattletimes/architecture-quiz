@@ -63,13 +63,33 @@ header {
   position: relative;
 }
 
+// SHARE BUTTON
+.share {
+  z-index: 999;
+
+  &.sharer-0 {
+
+    label {
+      border-radius: 0 !important;
+      background: @dark-blue !important;
+      transition: background .1s linear;
+      color: white !important;
+
+      span {
+        font-family: @block !important;
+        font-weight: normal !important;
+        font-size: 1em !important;
+      }
+
+      &:hover {
+        background: @dark-gray !important;
+      }
+    }
+  }
+}
+
 footer {
   width: 100%;
   clear: both;
   margin: 1em auto;
-  
-
-  @media @mobile {
-    padding-top: 0;
-  }
 }
