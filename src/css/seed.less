@@ -45,11 +45,15 @@ main.wrapper {
   background: @dark-blue;
   transition: background-color 0.1s linear;
   color: @df-off-white;
-  padding: 8px;
+  padding: 12px 8px;
   font-family: @block;
   font-weight: normal;
   font-size: 20px;
   text-transform: uppercase;
+
+  @media @mobile {
+    padding: 16px 8px;
+  }
 
   &:hover {
       background: @df-dark-gray;

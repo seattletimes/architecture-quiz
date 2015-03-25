@@ -18,7 +18,7 @@ var Share = require("share");
 
 new Share(".share", {
   ui: {
-    flyout: "top right"
+    flyout: "top center"
   },
   networks: {
     email: {

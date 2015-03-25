@@ -2,37 +2,34 @@
 
 .results-page {
   padding: 8px;
+  font-family: @body;
+  color: @dark-gray;
 }
 
 .result-name {
   font-family: @block;
-  color: @dark-gray;
   text-transform: uppercase;
   display: inline-block;
-  font-size: 1.8em;
+  font-size: 28px;
   line-height: 1.2em;
-  width: ~"calc(50% - 8px)";
+  width: 100%;
   margin: 5px 0;
-
-  @media @mobile {
-    width: 100%;
-  }
 }
 
 .award {
-  font-family: @body;
   font-weight: 700;
-  color: @dark-gray;
   font-size: 1.6em;
   line-height: 1.2em;
   margin: 20px 0 0;
 }
 
 .result-description {
-  font-family: @body;
   margin: 5px auto;
   font-size: 1.2em;
-  color: @dark-gray;
+}
+
+.green {
+  color: @green;
 }
 
 .red {
@@ -45,7 +42,6 @@
   font-size: 12px;
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  color: @dark-gray;
 
   a {
     color: @dark-gray;
@@ -54,10 +50,8 @@
 
 .result-image {
   margin: auto;
-  width: 720px;
-  max-width: 100%;
 
   img {
-    max-width: 100%;
+    width: 100%;
   }
 }

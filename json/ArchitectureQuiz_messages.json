@@ -5,7 +5,7 @@
     "message": "Perfect! You either helped create this quiz, or you should have! Consider yourself a Seattle architecture buff. ",
     "award": "You get fireworks Space Needle.",
     "image": "fireworks.jpg",
-    "credit": "LINDSEY WASSON / The Seattle Times"
+    "credit": "Lindsey Wasson / The Seattle Times"
   },
   {
     "title": "10",
@@ -18,18 +18,18 @@
   {
     "title": "7",
     "correct": "7",
-    "message": "Not bad. You're no architecture expert, but you have some astute observation skills.",
+    "message": "Not bad. You’re no architecture expert, but you have some astute observation skills.",
     "award": "You get sunset Space Needle.",
     "image": "sunset.jpg",
-    "credit": "CLIFF DESPEAUX / THE SEATTLE TIMES"
+    "credit": "Cliff DesPeaux / The Seattle Times"
   },
   {
     "title": "5",
     "correct": "5",
-    "message": "Well, you tried. And that's what counts right?",
+    "message": "Well, you tried. And that’s what counts right?",
     "award": "You get moonlit Space Needle.",
     "image": "moonlit.jpg",
-    "credit": "BETTINA HANSEN / The Seattle Times"
+    "credit": "Bettina Hansen / The Seattle Times"
   },
   {
     "title": "2",
@@ -42,9 +42,9 @@
   {
     "title": "0",
     "correct": "0",
-    "message": "Come on! You didn't even try did you? ",
+    "message": "Come on! You didn’t even try did you? ",
     "award": "You get foggy Space Needle.",
     "image": "foggy.jpg",
-    "credit": "LINDSEY WASSON / The Seattle Times"
+    "credit": "Lindsey Wasson / The Seattle Times"
   }
 ]

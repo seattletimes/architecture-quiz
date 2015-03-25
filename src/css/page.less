@@ -11,7 +11,7 @@ header {
     font-family: @block;
     font-weight: normal;
     color: white;
-    background: @dark-blue;
+    background: @df-middle-gray;
     display: inline-block;
     padding: 5px;
     margin: 5px auto 0;
@@ -23,7 +23,7 @@ header {
 
   .title {
     font-family: @block;
-    color: @dark-gray;
+    color: @df-dark-gray;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 2.5em;
@@ -70,6 +70,11 @@ header {
 
     &.share-quiz {
       display: inline-block !important;
+
+      @media @tablet {
+        display: block !important;
+        margin: 10px auto;
+      }
     }
 
     label {
@@ -85,7 +90,8 @@ header {
       }
 
       &:hover {
-        background: @df-dark-gray !important;
+        background: @dark-blue !important;
+        opacity: 1 !important;
       }
     }
 

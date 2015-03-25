@@ -125,7 +125,7 @@ Quiz.prototype = {
       description: description,
       ui: {
         flyout: "top right",
-        button_text: "Share results"
+        button_text: "Share your results"
       },
       networks: {
         email: {
