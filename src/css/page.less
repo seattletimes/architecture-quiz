@@ -72,14 +72,10 @@ header {
       display: inline-block !important;
     }
 
-    &.share-completed {
-      width: 100% !important;
-    }
-
     label {
       border-radius: 0 !important;
-      background: @dark-blue !important;
-      transition: background .1s linear;
+      background: @df-middle-gray !important;
+      transition: background .15s linear;
       color: white !important;
 
       span {
@@ -89,7 +85,19 @@ header {
       }
 
       &:hover {
-        background: @dark-gray !important;
+        background: @df-dark-gray !important;
+      }
+    }
+
+    &.share-completed {
+      width: 100% !important;
+
+      label {
+        background: @dark-blue !important;
+
+        &:hover {
+          background: @df-dark-gray !important;
+        }
       }
     }
   }
