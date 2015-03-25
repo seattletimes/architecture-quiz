@@ -118,7 +118,20 @@ Quiz.prototype = {
     });
   },
   createShare() {
-    new Share(".share-completed");
+    //sets up the sharing at the end
+    var description = "I got " + this.score + " out of " + this.questions.length + " on the Seattle Times Architecture quiz! How will you do?";
+    var url = window.location.href;
+    new Share(".share-completed", {
+      description: description,
+      ui: {
+        flyout: "top right"
+      },
+      networks: {
+        email: {
+          description: description + "\n" + url
+        }
+      }
+    });
   }
 };
 
