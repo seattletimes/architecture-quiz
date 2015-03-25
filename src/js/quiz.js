@@ -124,7 +124,8 @@ Quiz.prototype = {
     new Share(".share-completed", {
       description: description,
       ui: {
-        flyout: "top right"
+        flyout: "top right",
+        button_text: "Share results"
       },
       networks: {
         email: {

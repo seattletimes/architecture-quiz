@@ -1,7 +1,5 @@
 <div class="results-page">
 
-  <p><a class="share-completed share"></a>
-
   <p class="result-name">Score: <span class="red"><%= data.quiz.score %>/<%= data.quiz.questions.length %></span>
 
   <p class="result-name">Hints used: <span class="red"><%= data.quiz.hintCounter %></span>
@@ -9,6 +7,8 @@
   <p class="award"><%= data.scoring.award %>
 
   <p class="result-description"><%= data.scoring.message %>
+
+  <p><a class="share-completed share"></a>
 
   <section class="result-image">
     <img src="./assets/results/<%= data.scoring.image %>">
